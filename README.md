@@ -1,2 +1,3 @@
-Install the libraries `npm install`
-Run the app with `npm run dev`
+1. Install the libraries `npm install`
+   
+3. Run the app with `npm run dev`
