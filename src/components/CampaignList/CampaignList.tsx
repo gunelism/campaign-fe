@@ -17,11 +17,10 @@ const CampaignList: React.FC = () => {
 
             const data = await getCampaigns(`?${queryParams.toString()}`);
             setCampaigns(data.data);
-            console.log(data);
         } catch (error) {
             console.error("Failed to fetch campaigns:", error);
         }
-    }, [search, isRunning]); // Dependencies
+    }, [search, isRunning]);
 
     useEffect(() => {
         fetchCampaigns().then(() => {
