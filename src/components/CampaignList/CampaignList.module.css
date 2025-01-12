@@ -1,40 +1,167 @@
+/* Container to center content and make it responsive */
 .container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
     padding: 2rem;
+    background-color: #181818; /* Dark theme background */
+    color: #ffffff; /* Light text color */
+    font-family: Arial, sans-serif;
 }
 
+/* Buttons */
 .button {
     margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #4caf50;
+    padding: 0.6rem 1.2rem;
+    background-color: #4caf50; /* Green button */
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px; /* Smooth edges */
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
 }
 
+.reset-button {
+    background-color: #f44336; /* Red for reset filters */
+    margin-left: 0.5rem;
+}
+
+.reset-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Table styles */
 .table {
-    width: 80%;
+    width: 90%;
+    max-width: 800px; /* Restrict table width for larger screens */
     margin: 2rem auto;
     border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Table shadow */
+    border-radius: 8px;
+    overflow: hidden; /* Smooth edges */
 }
 
 .table th {
-    background-color: #f4f4f4;
+    background-color: #333333; /* Darker header for contrast */
     text-align: left;
-    padding: 0.5rem;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 1.1rem;
 }
 
 .table td {
-    border-bottom: 1px solid #ddd;
-    padding: 0.5rem;
+    background-color: #242424; /* Slightly lighter rows */
+    border-bottom: 1px solid #444444; /* Subtle row separation */
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
 }
 
+.table tr:hover {
+    background-color: #3a3a3a; /* Highlight row on hover */
+}
+
+/* Input fields */
 .input {
-    padding: 0.5rem;
+    padding: 0.6rem;
     margin-right: 1rem;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    background-color: #242424; /* Input matches dark theme */
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.input::placeholder {
+    color: #aaaaaa; /* Subtle placeholder color */
+}
+
+/* Dropdown (select) */
+.select {
+    padding: 0.6rem;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    background-color: #242424; /* Match input styling */
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.select option {
+    background-color: #242424; /* Match theme for dropdown options */
+    color: #ffffff;
+}
+
+/* Action buttons for Run/Stop */
+.status-button {
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.status-button.run {
+    background-color: #4caf50; /* Green for Run */
+    color: #ffffff;
+}
+
+.status-button.run:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.status-button.stop {
+    background-color: #f44336; /* Red for Stop */
+    color: #ffffff;
+}
+
+.status-button.stop:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Header */
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Align actions in a row */
+.actions-column {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table {
+        width: 100%; /* Use full width for smaller screens */
+    }
+
+    .input, .select {
+        width: 90%; /* Full-width inputs */
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .button, .reset-button {
+        width: 90%; /* Full-width buttons */
+        margin: 0.5rem 0;
+    }
+
+    .actions-column {
+        flex-direction: column; /* Stack action buttons vertically */
+    }
 }

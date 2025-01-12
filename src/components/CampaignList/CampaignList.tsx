@@ -46,7 +46,7 @@ const CampaignList: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            <h1>Campaigns</h1>
+            <h1 className="header">Campaigns</h1>
             <Link to="/create">
                 <button className={styles.button}>Create Campaign</button>
             </Link>

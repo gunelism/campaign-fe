@@ -25,7 +25,7 @@ const CreateCampaign: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            <h1>Create Campaign</h1>
+            <h1 className="header">Create Campaign</h1>
             <Link to="/">
                 <button className={styles.button}>Home</button>
             </Link>

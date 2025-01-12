@@ -1,36 +1,98 @@
+/* Main container to center content */
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
     padding: 2rem;
+    background-color: #181818; /* Dark theme background */
+    color: #ffffff; /* Light text color */
+    font-family: Arial, sans-serif;
     text-align: center;
 }
 
+/* Form container */
 .form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem; /* Spacing between form elements */
     max-width: 500px;
+    width: 90%; /* Responsive width */
     margin: auto;
+    background-color: #242424; /* Slightly lighter background for form */
+    padding: 2rem;
+    border-radius: 8px; /* Smooth edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Input fields */
 .input {
-    padding: 0.5rem;
+    padding: 0.6rem;
     width: 100%;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    background-color: #242424; /* Match form background */
+    color: #ffffff;
+    font-size: 1rem;
 }
 
-.button {
-    padding: 0.5rem 1rem;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.input::placeholder {
+    color: #aaaaaa; /* Subtle placeholder color */
 }
 
-.button:hover {
-    background-color: #45a049;
-}
-
+/* Payout row styles */
 .payout {
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+/* Button styles */
+.button {
+    padding: 0.6rem 1.2rem;
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Red button for Remove */
+.remove-button {
+    background-color: #f44336; /* Red for remove button */
+}
+
+.remove-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Header */
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .table {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .input-group {
+        flex-direction: column; /* Stack inputs vertically */
+    }
+
+    .button {
+        width: 100%; /* Full width buttons */
+    }
 }
